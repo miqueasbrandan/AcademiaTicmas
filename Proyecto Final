@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Curriculum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="curriculum.css">
+</head>
+<body>
+    <header>
+    <h1>Miqueas Brandán</h1>
+    <img src="https://mscfootball.com/wp-content/uploads/2022/01/leo-messi-150x150.jpg" alt="Foto de Miqueas">
+    </header>
+    <main>
+        <button class="boton" id="toggle-info">Mostrar información personal</button>
+        <section id="personal-info">
+    <div>
+        <h2 class="informacionpersonal">Información Personal</h2>
+    </div>
+            
+    <div> 
+        <ul>
+            <li>Dirección: Calle Higueritas 2400, Yerba Buena, Tucumán</li>
+            <li>Teléfono: 3815422840</li>
+            <li>Correo electrónico: mbmiqueasbrandan@gmail.com</li>
+        </ul>
+    </div>
+    <div> 
+        <h2 class="educacion">Educación</h2>
+    </div>
+<div>
+        <ul>
+        <li> Certificado de EGB3 y Polimodal articulado con TTP en Trayecto Técnico Personal y Profesional en informática, Escuela Municipal Petrona C. de Adami, 2013</li>
+        <li>Diplomatura en Periodismo Deportivo, Instituto Red Milenium, Tucumán, 2014/2016</li>
+        <li> Licenciatura en Ciencias de la Comunicación, Universidad Nacional de Tucumán, Facultad de Filosofía y Letras, 2017/actuaidad</li>
+    </ul>
+    </div>
+    <div>  
+        <h2 class="experiencia" >Experiencia Laboral</h2>
+    </div>
+<div> 
+    <ul>
+        <li>Servicios de Cadetería, Empresa Craft, 2020-2021</li>
+        <li>Producción y conducción radial, Radio Nacional y Radio Q, 2017-2020</li>
+        <li>Capacitador del Sistema GDE, Municipalidad de Yerba Buena, 2021/actualidad</li>
+
+
+    </ul>
+</div>
+    <div>
+        <h2 class="habilidades" >Habilidades</h2>
+    </div>
+    <div> 
+        <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Inglés Básico</li>
+        <li>Obs Studio</li>
+        <li>Adobe Premier</li>
+        <li>Word y Excel Básico</li>
+
+
+
+    </ul>
+    </div>
+    
+    </main>
+    <script src="curriculum.js"> </script>
+</body>
+</html>
+
+
+
+
+/*La hoja de CSS quedaría así*/
+* {
+    padding: 0%;
+    margin:0%;
+    background-color: bisque;
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  
+  img {
+    border-radius: 50%;
+    height: 150px;
+    margin-right: 1em;
+    width: 150px;
+  }
+  
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+    font-size: 18px;
+  }
+.boton {
+    background-color: white;
+}
+.informacionpersonal {
+    padding: 5px;
+}
+.educacion{
+    padding: 5px;
+    
+}
+.experiencia {
+    padding: 5px;
+}
+
+.habilidades {
+    padding: 5px;
+}
+
+//En JavaScript el código es el siguiente
+const toggleInfoBtn = document.querySelector('#toggle-info');
+    const personalInfo = document.querySelector('#personal-info');
+
+    toggleInfoBtn.addEventListener('click', function() {
+        personalInfo.style.display = personalInfo.style.display === 'block' ? 'none' : 'block';
+        toggleInfoBtn.textContent = toggleInfoBtn.textContent === 'Mostrar información personal' ? 'Ocultar información personal' : 'Mostrar información personal';
+    });
